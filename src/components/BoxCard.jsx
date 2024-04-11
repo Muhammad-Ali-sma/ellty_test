@@ -35,9 +35,10 @@ const BoxCard = () => {
         handleCheckboxChange={handleCheckboxChange}
       />
       <div className={styles.line_break} />
-      {pages.map(x => (
+      {pages.map((x, i) => (
         <ListItem
           title={x}
+          key={`item_${i}`}
           handleCheckboxChange={handleCheckboxChange}
           isChecked={checkedItems.includes(x)}
         />
